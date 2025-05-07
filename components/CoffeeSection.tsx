@@ -298,16 +298,6 @@ export default function CoffeeSection() {
             </div>
           </div>
         </div>
-
-        <div className="text-center">
-          <Link
-            href="#contacto"
-            className="inline-flex items-center rounded-full border-2 border-green-200 px-8 py-3.5 text-sm font-medium text-green-700 transition hover:bg-green-50 shadow-sm"
-          >
-            Conoce Más Sobre Nuestro Café
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
-        </div>
       </div>
     </section>
   )

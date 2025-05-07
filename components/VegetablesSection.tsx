@@ -267,13 +267,6 @@ export default function VegetablesSection() {
             </div>
           </div>
         </div>
-
-        <div className="mt-16 text-center">
-          <Link href="#contacto" className="inline-flex items-center text-lg font-medium text-green-600">
-            Conoce más sobre nuestros métodos de producción sostenible
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
       </div>
     </section>
   )

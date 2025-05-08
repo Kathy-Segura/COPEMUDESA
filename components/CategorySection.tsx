@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Coffee, Wheat, Leaf, ArrowRight } from "lucide-react"
+import { Coffee, Wheat,Droplet, Leaf, ArrowRight } from "lucide-react"
 
 export default function CategorySection() {
   return (
@@ -89,7 +89,7 @@ export default function CategorySection() {
               </div>
             </div>
           </Link>
-        </div>
+        </div> 
       </div>
     </section>
   )

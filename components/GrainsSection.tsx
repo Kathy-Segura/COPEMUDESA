@@ -3,393 +3,396 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Wheat, Shovel, SproutIcon as Seedling, TreesIcon as Plant, Sun } from "lucide-react"
+import { ArrowRight, Sprout, Tractor } from "lucide-react"
 
 export default function GrainsSection() {
-  const [activeStep, setActiveStep] = useState(0)
-  const [isAnimating, setIsAnimating] = useState(false)
-
-  useEffect(() => {
-    setIsAnimating(true)
-    const timer = setTimeout(() => setIsAnimating(false), 500)
-    return () => clearTimeout(timer)
-  }, [activeStep])
-
-  const steps = [
-    {
-      title: "Preparación de Terreno",
-      description:
-        "Preparamos cuidadosamente el suelo para asegurar condiciones óptimas de cultivo. Utilizamos técnicas de labranza mínima para conservar la estructura del suelo y su biodiversidad.",
-      image: "/placeholder.svg?height=600&width=800",
-      details: [
-        "Análisis de suelo para determinar necesidades específicas",
-        "Incorporación de abonos orgánicos y compost",
-        "Técnicas de conservación de suelos en terrenos inclinados",
-      ],
-      icon: <Shovel className="w-6 h-6" />,
-      color: "bg-stone-100",
-      lightColor: "bg-stone-50",
-      textColor: "text-stone-600",
-      borderColor: "border-stone-200",
-    },
-    {
-      title: "Siembra",
-      description:
-        "Seleccionamos semillas de alta calidad, muchas de ellas variedades criollas adaptadas a nuestro clima y condiciones locales, preservando así la biodiversidad agrícola de la región.",
-      image: "/placeholder.svg?height=600&width=800",
-      details: [
-        "Selección de semillas nativas y adaptadas localmente",
-        "Siembra directa o con mínima labranza",
-        "Densidades óptimas según cada variedad de grano",
-      ],
-      icon: <Seedling className="w-6 h-6" />,
-      color: "bg-green-100",
-      lightColor: "bg-green-50",
-      textColor: "text-green-600",
-      borderColor: "border-green-200",
-    },
-    {
-      title: "Cultivo",
-      description:
-        "Durante el ciclo de cultivo, implementamos prácticas agroecológicas que minimizan el uso de insumos externos y favorecen el equilibrio natural del ecosistema agrícola.",
-      image: "/placeholder.svg?height=600&width=800",
-      details: [
-        "Control biológico de plagas y enfermedades",
-        "Manejo integrado de malezas",
-        "Rotación de cultivos para mantener la fertilidad del suelo",
-      ],
-      icon: <Plant className="w-6 h-6" />,
-      color: "bg-teal-100",
-      lightColor: "bg-teal-50",
-      textColor: "text-teal-600",
-      borderColor: "border-teal-200",
-    },
-    {
-      title: "Cosecha",
-      description:
-        "La cosecha se realiza en el momento óptimo de madurez de cada grano, asegurando así la máxima calidad y rendimiento. Combinamos métodos tradicionales con tecnologías apropiadas.",
-      image: "/placeholder.svg?height=600&width=800",
-      details: [
-        "Determinación precisa del momento óptimo de cosecha",
-        "Técnicas de cosecha que minimizan pérdidas",
-        "Secado natural aprovechando el sol de Estelí",
-      ],
-      icon: <Sun className="w-6 h-6" />,
-      color: "bg-amber-100",
-      lightColor: "bg-amber-50",
-      textColor: "text-amber-600",
-      borderColor: "border-amber-200",
-    },
-  ]
+  const [activeStep, setActiveStep] = useState(1)
 
   return (
-    <section id="granos" className="py-24 relative overflow-hidden bg-[#f9f9f7]">
-      {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-green-50 rounded-full opacity-40 -translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-amber-50 rounded-full opacity-40 translate-y-1/3 translate-x-1/3 blur-3xl"></div>
-      <div className="absolute top-1/4 right-1/4 w-5 h-5 bg-green-100 rounded-full opacity-70"></div>
-      <div className="absolute top-3/4 left-1/3 w-3 h-3 bg-teal-100 rounded-full opacity-70"></div>
-      <div className="absolute bottom-1/3 right-1/2 w-6 h-6 bg-amber-100 rounded-full opacity-70"></div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="mb-16 text-center flex flex-col items-center">
-          <span className="inline-block rounded-full bg-green-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-green-700 mb-4">
-            Proceso de Producción
+    <section className="py-24">
+      <div className="container mx-auto px-4">
+        <div className="mb-16 text-center">
+          <span className="inline-block rounded-full bg-yellow-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-yellow-800 mb-4">
+            Proceso de Granos Básicos
           </span>
-          <div className="flex items-center gap-4 mb-6">
-            <h2 className="text-4xl font-bold text-gray-900 md:text-5xl">Granos Básicos</h2>
-            <div className="relative w-12 h-12">
-              <div className="absolute inset-0 bg-amber-100 rounded-full opacity-50"></div>
-              <div className="absolute inset-1 bg-amber-50 rounded-full opacity-70 flex items-center justify-center">
-                <Wheat className="w-6 h-6 text-amber-600" />
-              </div>
-            </div>
-          </div>
+          <h2 className="mb-6 text-4xl font-bold text-gray-900 md:text-5xl">Granos Básicos</h2>
           <p className="mx-auto max-w-3xl text-lg text-gray-600">
-            Producimos granos básicos utilizando técnicas sostenibles que respetan el medio ambiente y preservan las
-            tradiciones agrícolas de nuestra región, asegurando productos de alta calidad nutritiva.
+            Los granos básicos de nuestra cooperativa son cultivados por pequeños productores que mantienen vivas las
+            tradiciones agrícolas de la región, utilizando técnicas sostenibles.
           </p>
         </div>
 
-        {/* Interactive Process Display */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-          {/* Left Side - Process Steps */}
-          <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
-            <div className="p-6 bg-green-50 border-b border-green-100">
-              <h3 className="text-xl font-bold text-gray-800">Proceso de Producción</h3>
-              <p className="text-gray-600 text-sm">Selecciona una etapa para conocer más detalles</p>
-            </div>
+        {/* Proceso de producción - Estilo vertical con números */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-yellow-800 mb-8 text-center">Proceso de Producción</h3>
 
-            <div className="p-6 space-y-4">
-              {steps.map((step, index) => (
-                <button
-                  key={index}
-                  className={`w-full text-left p-4 rounded-xl transition-all duration-300 flex items-center gap-4 border ${
-                    activeStep === index
-                      ? `${step.borderColor} ${step.lightColor} shadow-sm`
-                      : "border-gray-100 hover:border-gray-200"
-                  }`}
-                  onClick={() => setActiveStep(index)}
-                >
-                  <div
-                    className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                      activeStep === index ? step.color : "bg-gray-50"
-                    }`}
-                  >
-                    <div className={activeStep === index ? step.textColor : "text-gray-400"}>{step.icon}</div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Paso 1 */}
+            <div
+              className={`rounded-xl shadow-md overflow-hidden transition-all ${
+                activeStep === 1 ? "ring-2 ring-yellow-500 transform scale-105" : "bg-white hover:shadow-lg"
+              }`}
+              onClick={() => setActiveStep(1)}
+            >
+              <div className="relative h-40">
+                <Image
+                  src="/placeholder.svg?height=300&width=400"
+                  alt="Preparación de Terreno"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute top-4 left-4">
+                  <div className="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold">
+                    1
                   </div>
-                  <div>
-                    <h4 className={`font-bold ${activeStep === index ? step.textColor : "text-gray-700"}`}>
-                      {step.title}
-                    </h4>
-                    <p className={`text-xs ${activeStep === index ? "text-gray-600" : "text-gray-500"}`}>
-                      Paso {index + 1} del proceso
-                    </p>
-                  </div>
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Side - Step Details */}
-          <div
-            className={`bg-white rounded-2xl shadow-sm overflow-hidden transition-all duration-500 ${
-              isAnimating ? "transform scale-105" : ""
-            }`}
-          >
-            <div className="relative h-64">
-              <Image
-                src={steps[activeStep].image || "/placeholder.svg"}
-                alt={steps[activeStep].title}
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 p-6">
-                <div
-                  className={`w-14 h-14 rounded-full ${steps[activeStep].color} flex items-center justify-center mb-3`}
-                >
-                  <div className={steps[activeStep].textColor}>{steps[activeStep].icon}</div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-1">{steps[activeStep].title}</h3>
-                <p className="text-white/80 text-sm">Paso {activeStep + 1} de 4</p>
+                <div className="absolute bottom-4 left-4">
+                  <h4 className="text-white font-bold">Preparación</h4>
+                </div>
+              </div>
+              <div className="p-4">
+                <p className="text-sm text-gray-600">
+                  Preparamos el terreno respetando los ciclos naturales y utilizando técnicas de conservación de suelos.
+                </p>
               </div>
             </div>
 
-            <div className="p-6">
-              <p className="text-gray-600 mb-6">{steps[activeStep].description}</p>
-              <h4 className="font-bold text-gray-800 mb-3">Características clave:</h4>
-              <ul className="space-y-3">
-                {steps[activeStep].details.map((detail, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div
-                      className={`w-6 h-6 rounded-full ${steps[activeStep].lightColor} flex-shrink-0 flex items-center justify-center mt-0.5`}
-                    >
-                      <div className={`w-2 h-2 rounded-full ${steps[activeStep].color}`}></div>
-                    </div>
-                    <span className="text-gray-700">{detail}</span>
-                  </li>
-                ))}
-              </ul>
+            {/* Paso 2 */}
+            <div
+              className={`rounded-xl shadow-md overflow-hidden transition-all ${
+                activeStep === 2 ? "ring-2 ring-yellow-500 transform scale-105" : "bg-white hover:shadow-lg"
+              }`}
+              onClick={() => setActiveStep(2)}
+            >
+              <div className="relative h-40">
+                <Image
+                  src="/placeholder.svg?height=300&width=400"
+                  alt="Siembra de Granos"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute top-4 left-4">
+                  <div className="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold">
+                    2
+                  </div>
+                </div>
+                <div className="absolute bottom-4 left-4">
+                  <h4 className="text-white font-bold">Siembra</h4>
+                </div>
+              </div>
+              <div className="p-4">
+                <p className="text-sm text-gray-600">
+                  La siembra se realiza siguiendo el calendario lunar y las tradiciones locales, utilizando semillas
+                  criollas.
+                </p>
+              </div>
             </div>
+
+            {/* Paso 3 */}
+            <div
+              className={`rounded-xl shadow-md overflow-hidden transition-all ${
+                activeStep === 3 ? "ring-2 ring-yellow-500 transform scale-105" : "bg-white hover:shadow-lg"
+              }`}
+              onClick={() => setActiveStep(3)}
+            >
+              <div className="relative h-40">
+                <Image
+                  src="/placeholder.svg?height=300&width=400"
+                  alt="Cultivo de Granos"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute top-4 left-4">
+                  <div className="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold">
+                    3
+                  </div>
+                </div>
+                <div className="absolute bottom-4 left-4">
+                  <h4 className="text-white font-bold">Cultivo</h4>
+                </div>
+              </div>
+              <div className="p-4">
+                <p className="text-sm text-gray-600">
+                  Implementamos prácticas agroecológicas para el manejo de plagas y enfermedades, evitando químicos
+                  sintéticos.
+                </p>
+              </div>
+            </div>
+
+            {/* Paso 4 */}
+            <div
+              className={`rounded-xl shadow-md overflow-hidden transition-all ${
+                activeStep === 4 ? "ring-2 ring-yellow-500 transform scale-105" : "bg-white hover:shadow-lg"
+              }`}
+              onClick={() => setActiveStep(4)}
+            >
+              <div className="relative h-40">
+                <Image
+                  src="/placeholder.svg?height=300&width=400"
+                  alt="Cosecha de Granos"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute top-4 left-4">
+                  <div className="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold">
+                    4
+                  </div>
+                </div>
+                <div className="absolute bottom-4 left-4">
+                  <h4 className="text-white font-bold">Cosecha</h4>
+                </div>
+              </div>
+              <div className="p-4">
+                <p className="text-sm text-gray-600">
+                  La cosecha se realiza en el momento óptimo de madurez, utilizando métodos tradicionales que preservan
+                  la calidad.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Detalle del paso seleccionado */}
+          <div className="mt-8 bg-white rounded-2xl shadow-md p-8">
+            {activeStep === 1 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-yellow-100 text-yellow-700 shrink-0">
+                      <Tractor className="h-6 w-6" />
+                    </div>
+                    <h4 className="text-2xl font-bold text-yellow-800">Preparación del Terreno</h4>
+                  </div>
+                  <p className="text-gray-700 mb-6">
+                    Preparamos el terreno respetando los ciclos naturales y utilizando técnicas de conservación de
+                    suelos para mantener su fertilidad a largo plazo y garantizar cultivos saludables.
+                  </p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-yellow-600 font-bold">•</span>
+                      <span className="text-gray-700">Limpieza selectiva del terreno</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-yellow-600 font-bold">•</span>
+                      <span className="text-gray-700">Construcción de barreras vivas</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-yellow-600 font-bold">•</span>
+                      <span className="text-gray-700">Incorporación de abonos orgánicos</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="relative h-64 rounded-xl overflow-hidden">
+                  <Image
+                    src="/placeholder.svg?height=400&width=600"
+                    alt="Preparación de Terreno"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            )}
+
+            {activeStep === 2 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="order-2 md:order-1 relative h-64 rounded-xl overflow-hidden">
+                  <Image
+                    src="/placeholder.svg?height=400&width=600"
+                    alt="Siembra de Granos"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="order-1 md:order-2">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-yellow-100 text-yellow-700 shrink-0">
+                      <Wheat className="h-6 w-6" />
+                    </div>
+                    <h4 className="text-2xl font-bold text-yellow-800">Siembra</h4>
+                  </div>
+                  <p className="text-gray-700 mb-6">
+                    La siembra se realiza siguiendo el calendario lunar y las tradiciones locales, utilizando semillas
+                    criollas seleccionadas por generaciones de agricultores para garantizar su adaptación a nuestro
+                    clima.
+                  </p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-yellow-600 font-bold">•</span>
+                      <span className="text-gray-700">Selección de semillas criollas</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-yellow-600 font-bold">•</span>
+                      <span className="text-gray-700">Siembra manual o con tracción animal</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-yellow-600 font-bold">•</span>
+                      <span className="text-gray-700">Siembra asociada de cultivos</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            )}
+
+            {activeStep === 3 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-yellow-100 text-yellow-700 shrink-0">
+                      <Sprout className="h-6 w-6" />
+                    </div>
+                    <h4 className="text-2xl font-bold text-yellow-800">Cultivo</h4>
+                  </div>
+                  <p className="text-gray-700 mb-6">
+                    Durante el cultivo, implementamos prácticas agroecológicas para el manejo de plagas y enfermedades,
+                    evitando el uso de químicos sintéticos y promoviendo el equilibrio natural del ecosistema.
+                  </p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-yellow-600 font-bold">•</span>
+                      <span className="text-gray-700">Control manual de malezas</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-yellow-600 font-bold">•</span>
+                      <span className="text-gray-700">Uso de biopreparados naturales</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-yellow-600 font-bold">•</span>
+                      <span className="text-gray-700">Rotación de cultivos</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="relative h-64 rounded-xl overflow-hidden">
+                  <Image
+                    src="/placeholder.svg?height=400&width=600"
+                    alt="Cultivo de Granos"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            )}
+
+            {activeStep === 4 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="order-2 md:order-1 relative h-64 rounded-xl overflow-hidden">
+                  <Image
+                    src="/placeholder.svg?height=400&width=600"
+                    alt="Cosecha de Granos"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="order-1 md:order-2">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-yellow-100 text-yellow-700 shrink-0">
+                      <Wheat className="h-6 w-6" />
+                    </div>
+                    <h4 className="text-2xl font-bold text-yellow-800">Cosecha</h4>
+                  </div>
+                  <p className="text-gray-700 mb-6">
+                    La cosecha se realiza en el momento óptimo de madurez, utilizando métodos tradicionales que
+                    preservan la calidad de los granos y minimizan las pérdidas, asegurando el mejor producto final.
+                  </p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-yellow-600 font-bold">•</span>
+                      <span className="text-gray-700">Cosecha manual en el punto óptimo</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-yellow-600 font-bold">•</span>
+                      <span className="text-gray-700">Secado natural al sol</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-yellow-600 font-bold">•</span>
+                      <span className="text-gray-700">Almacenamiento en silos mejorados</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
-        {/* Grain Types */}
-        <div className="mb-20">
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-12">Nuestros Granos Básicos</h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Tipos de granos */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-yellow-800 mb-8 text-center">Nuestros Granos Básicos</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Frijol */}
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-rose-50 to-rose-100 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300 opacity-90"></div>
-              <div className="relative bg-white rounded-2xl overflow-hidden shadow-sm transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300 z-10">
-                <div className="h-48 relative">
-                  <Image src="/placeholder.svg?height=300&width=400" alt="Frijol Rojo" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-4">
-                    <h4 className="text-xl font-bold text-white mb-1">Frijol Rojo</h4>
-                    <p className="text-white/80 text-sm">Variedad tradicional nicaragüense</p>
-                  </div>
+            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
+              <div className="relative h-48">
+                <Image src="/placeholder.svg?height=400&width=600" alt="Frijol Rojo" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4">
+                  <h4 className="text-white font-bold">Frijol Rojo</h4>
                 </div>
-                <div className="p-6">
-                  <p className="text-sm text-gray-600 mb-4">
-                    Cultivamos variedades tradicionales de frijol rojo, apreciadas por su sabor, textura y alto valor
-                    nutritivo. Ideal para el tradicional gallo pinto nicaragüense.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="inline-block rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-rose-600">
-                      Rico en proteínas
-                    </span>
-                    <span className="inline-block rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-rose-600">
-                      Cultivo sostenible
-                    </span>
-                  </div>
+              </div>
+              <div className="p-5">
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-sm font-medium text-yellow-800">Rendimiento:</span>
+                  <span className="text-sm font-medium text-gray-700">15-20 qq/mz</span>
                 </div>
+                <p className="text-sm text-gray-600">
+                  Pilar de la dieta nicaragüense, cultivamos variedades criollas adaptadas a nuestro clima con alto
+                  valor nutricional.
+                </p>
               </div>
             </div>
 
             {/* Maíz */}
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-50 to-amber-100 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300 opacity-90"></div>
-              <div className="relative bg-white rounded-2xl overflow-hidden shadow-sm transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300 z-10">
-                <div className="h-48 relative">
-                  <Image src="/placeholder.svg?height=300&width=400" alt="Maíz Criollo" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-4">
-                    <h4 className="text-xl font-bold text-white mb-1">Maíz Criollo</h4>
-                    <p className="text-white/80 text-sm">Semillas nativas de la región</p>
-                  </div>
+            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
+              <div className="relative h-48">
+                <Image src="/placeholder.svg?height=400&width=600" alt="Maíz Criollo" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4">
+                  <h4 className="text-white font-bold">Maíz Criollo</h4>
                 </div>
-                <div className="p-6">
-                  <p className="text-sm text-gray-600 mb-4">
-                    Preservamos variedades locales de maíz, fundamentales en la dieta nicaragüense. Nuestro maíz se
-                    utiliza para tortillas, tamales y otros platillos tradicionales.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="inline-block rounded-full bg-amber-50 px-3 py-1 text-xs font-medium text-amber-600">
-                      Semillas nativas
-                    </span>
-                    <span className="inline-block rounded-full bg-amber-50 px-3 py-1 text-xs font-medium text-amber-600">
-                      Sin transgénicos
-                    </span>
-                  </div>
+              </div>
+              <div className="p-5">
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-sm font-medium text-yellow-800">Rendimiento:</span>
+                  <span className="text-sm font-medium text-gray-700">25-35 qq/mz</span>
                 </div>
+                <p className="text-sm text-gray-600">
+                  Cultivado siguiendo tradiciones ancestrales, preservamos variedades locales como el Olote Rojo y
+                  Pujagua.
+                </p>
               </div>
             </div>
 
-            {/* Arroz */}
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-teal-50 to-teal-100 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300 opacity-90"></div>
-              <div className="relative bg-white rounded-2xl overflow-hidden shadow-sm transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300 z-10">
-                <div className="h-48 relative">
-                  <Image
-                    src="/placeholder.svg?height=300&width=400"
-                    alt="Arroz de Secano"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-4">
-                    <h4 className="text-xl font-bold text-white mb-1">Arroz de Secano</h4>
-                    <p className="text-white/80 text-sm">Adaptado a condiciones locales</p>
-                  </div>
+            {/* Sorgo */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
+              <div className="relative h-48">
+                <Image src="/placeholder.svg?height=400&width=600" alt="Sorgo" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4">
+                  <h4 className="text-white font-bold">Sorgo</h4>
                 </div>
-                <div className="p-6">
-                  <p className="text-sm text-gray-600 mb-4">
-                    Producimos arroz adaptado a condiciones de secano, utilizando variedades que requieren menos agua y
-                    son más resistentes a las condiciones climáticas locales.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="inline-block rounded-full bg-teal-50 px-3 py-1 text-xs font-medium text-teal-600">
-                      Bajo consumo de agua
-                    </span>
-                    <span className="inline-block rounded-full bg-teal-50 px-3 py-1 text-xs font-medium text-teal-600">
-                      Alta resistencia
-                    </span>
-                  </div>
+              </div>
+              <div className="p-5">
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-sm font-medium text-yellow-800">Rendimiento:</span>
+                  <span className="text-sm font-medium text-gray-700">30-40 qq/mz</span>
                 </div>
+                <p className="text-sm text-gray-600">
+                  Cultivo resistente a la sequía, utilizado tanto para consumo humano como animal, fundamental para la
+                  seguridad alimentaria.
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Sustainable Practices */}
-        <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-2xl p-8 shadow-sm">
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">Prácticas Sostenibles</h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-full bg-green-50 flex items-center justify-center mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6 text-green-600"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                  />
-                </svg>
-              </div>
-              <h4 className="font-bold text-gray-900 mb-2">Rotación de Cultivos</h4>
-              <p className="text-sm text-gray-600">
-                Alternamos diferentes cultivos para mantener la fertilidad del suelo y romper ciclos de plagas.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-full bg-teal-50 flex items-center justify-center mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6 text-teal-600"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                  />
-                </svg>
-              </div>
-              <h4 className="font-bold text-gray-900 mb-2">Conservación de Suelos</h4>
-              <p className="text-sm text-gray-600">
-                Implementamos barreras vivas, terrazas y otras técnicas para prevenir la erosión en terrenos inclinados.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-full bg-amber-50 flex items-center justify-center mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6 text-amber-600"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                  />
-                </svg>
-              </div>
-              <h4 className="font-bold text-gray-900 mb-2">Control Biológico</h4>
-              <p className="text-sm text-gray-600">
-                Utilizamos enemigos naturales de las plagas y preparados botánicos para proteger nuestros cultivos.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-full bg-rose-50 flex items-center justify-center mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6 text-rose-600"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                  />
-                </svg>
-              </div>
-              <h4 className="font-bold text-gray-900 mb-2">Semillas Criollas</h4>
-              <p className="text-sm text-gray-600">
-                Preservamos y reproducimos semillas tradicionales adaptadas a nuestro clima y condiciones locales.
-              </p>
-            </div>
-          </div>
+        <div className="mt-16 text-center">
+          <a
+            href="#"
+            className="inline-flex items-center rounded-full border border-yellow-700 px-6 py-3 text-sm font-medium text-yellow-700 transition hover:bg-yellow-50"
+          >
+            Conoce más sobre nuestros granos básicos
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </a>
         </div>
       </div>
     </section>

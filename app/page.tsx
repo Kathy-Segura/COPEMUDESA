@@ -26,8 +26,8 @@ export default function LandingPage() {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <HistorySection />
         <MissionVisionSection />
+        <HistorySection />
         <CategorySection />
         <CoffeeSection/>
         <GrainsSection/>

@@ -54,8 +54,8 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="#proceso" className="text-sm font-medium text-green-800 hover:text-green-600 transition">
-                Proceso
+              <Link href="#productos" className="text-sm font-medium text-green-800 hover:text-green-600 transition">
+                Productos
               </Link>
             </li>
             <li>
@@ -121,11 +121,11 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      href="#proceso"
+                      href="#productos"
                       className="text-lg font-medium text-green-800"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      Proceso
+                      Productos
                     </Link>
                   </li>
                   <li>

@@ -13,7 +13,7 @@ export default function HoneySection() {
       title: "Establecimiento de Apiarios",
       description:
         "Ubicamos estratégicamente nuestros apiarios en zonas con abundante floración y lejos de fuentes de contaminación, asegurando un ambiente ideal para nuestras abejas y la producción de miel de alta calidad.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/miel.jpg?height=400&width=600",
       details: [
         "Selección cuidadosa de ubicaciones con flora melífera diversa",
         "Diseño de colmenas adaptadas al clima local",
@@ -117,13 +117,12 @@ export default function HoneySection() {
                 }`}
                 onClick={() => setActiveStep(index)}
               >
-                <div className="relative h-48">
-                  <Image src={step.image || "/placeholder.svg"} alt={step.title} fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                  <div className="absolute top-4 left-4 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-sm font-bold text-amber-600">
-                    {index + 1}
-                  </div>
+               <div className="p-4">
+                <div className="w-8 h-4 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-sm font-bold text-amber-600 mb-4">
+                  {index + 1}
                 </div>
+              </div>
+
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <div
@@ -137,7 +136,7 @@ export default function HoneySection() {
                       {step.title}
                     </h3>
                   </div>
-                  <p className="text-sm text-gray-600 line-clamp-2">{step.description}</p>
+              
                 </div>
               </div>
             ))}

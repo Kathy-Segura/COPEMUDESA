@@ -54,8 +54,8 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="#productos" className="text-sm font-medium text-green-800 hover:text-green-600 transition">
-                Productos
+              <Link href="#category" className="text-sm font-medium text-green-800 hover:text-green-600 transition">
+               Categorías
               </Link>
             </li>
             <li>
@@ -121,11 +121,11 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      href="#productos"
+                      href="#category"
                       className="text-lg font-medium text-green-800"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      Productos
+                      Categorías
                     </Link>
                   </li>
                   <li>

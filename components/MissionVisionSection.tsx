@@ -1,13 +1,15 @@
-import Link from "next/link"
+import { Target, Eye, Heart, Check } from "lucide-react"
 import Image from "next/image"
-import { Target, Award, ArrowRight, Globe, Users, Leaf, Eye, Heart} from "lucide-react"
 
-
-export default function MissionVisionSection() {
+export default function MisionVisionValores() {
   return (
-    <section id="misionvision" className="py-24 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="mb-16 text-center">
+    <section id="misionvision" className="py-20 bg-gradient-to-b from-white to-green-50 relative overflow-hidden">
+      {/* Elementos decorativos de fondo */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-green-100/30 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-100/20 rounded-full blur-3xl"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="mb-12 text-center">
           <span className="inline-block rounded-full bg-green-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-green-800 mb-4">
             Nuestra Esencia
           </span>
@@ -18,71 +20,103 @@ export default function MissionVisionSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {/* Misión */}
-          <div className="bg-white rounded-xl shadow-md p-6 border-l-4 border-green-500 hover:shadow-lg transition-all duration-300">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-green-600 flex-shrink-0">
-                <Target className="h-6 w-6" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {/* Misión - Diseño mejorado y compacto */}
+          <div className="bg-white rounded-xl shadow-md overflow-hidden transform transition-all hover:shadow-lg">
+            <div className="h-32 relative">
+              <Image
+                src="/placeholder.svg?height=300&width=500"
+                alt="Misión de la Cooperativa"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-green-900/80 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 p-4">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-green-600 flex-shrink-0">
+                    <Target className="h-4 w-4" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Misión</h3>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900">Misión</h3>
             </div>
-            <p className="text-gray-700">
-              Somos una cooperativa agrícola comprometida con el desarrollo sostenible de Matagalpa, implementando
-              procesos de producción que respetan el medio ambiente, preservan nuestras tradiciones y mejoran la calidad
-              de vida de nuestros asociados y sus familias.
-            </p>
+            <div className="p-5">
+              <p className="text-gray-700 text-sm">
+                Somos una cooperativa agrícola comprometida con el desarrollo sostenible de Matagalpa, implementando
+                procesos de producción que respetan el medio ambiente, preservan nuestras tradiciones y mejoran la
+                calidad de vida de nuestros asociados y sus familias.
+              </p>
+            </div>
           </div>
 
-          {/* Visión */}
-          <div className="bg-white rounded-xl shadow-md p-6 border-l-4 border-green-500 hover:shadow-lg transition-all duration-300">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-green-600 flex-shrink-0">
-                <Eye className="h-6 w-6" />
+          {/* Visión - Diseño mejorado y compacto */}
+          <div className="bg-white rounded-xl shadow-md overflow-hidden transform transition-all hover:shadow-lg">
+            <div className="h-32 relative">
+              <Image
+                src="/placeholder.svg?height=300&width=500"
+                alt="Visión de la Cooperativa"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-green-900/80 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 p-4">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-green-600 flex-shrink-0">
+                    <Eye className="h-4 w-4" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Visión</h3>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900">Visión</h3>
             </div>
-            <p className="text-gray-700">
-              Ser una cooperativa líder en la producción agrícola sostenible en Nicaragua, reconocida internacionalmente
-              por la excelencia de nuestros procesos, la calidad de nuestros productos y nuestro impacto positivo en la
-              comunidad y el medio ambiente.
-            </p>
+            <div className="p-5">
+              <p className="text-gray-700 text-sm">
+                Ser una cooperativa líder en la producción agrícola sostenible en Nicaragua, reconocida
+                internacionalmente por la excelencia de nuestros procesos, la calidad de nuestros productos y nuestro
+                impacto positivo en la comunidad y el medio ambiente.
+              </p>
+            </div>
           </div>
 
-          {/* Valores */}
-          <div className="bg-white rounded-xl shadow-md p-6 border-l-4 border-green-500 hover:shadow-lg transition-all duration-300">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-green-600 flex-shrink-0">
-                <Heart className="h-6 w-6" />
+          
+          {/* Valores - Diseño mejorado y compacto */}
+          <div className="bg-white rounded-xl shadow-md overflow-hidden transform transition-all hover:shadow-lg">
+            <div className="h-32 relative">
+              <Image
+                src="/placeholder.svg?height=300&width=500"
+                alt="Valores de la Cooperativa"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-green-900/80 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 p-4">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-green-600 flex-shrink-0">
+                    <Heart className="h-4 w-4" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Valores</h3>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900">Valores</h3>
             </div>
-            <ul className="space-y-2 text-gray-700">
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 font-bold">•</span>
-                <span>
-                  <strong>Sostenibilidad:</strong> Respetamos y protegemos el medio ambiente.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 font-bold">•</span>
-                <span>
-                  <strong>Cooperación:</strong> Trabajamos juntos por el bien común.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 font-bold">•</span>
-                <span>
-                  <strong>Transparencia:</strong> Actuamos con honestidad y claridad.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 font-bold">•</span>
-                <span>
-                  <strong>Innovación:</strong> Mejoramos respetando tradiciones.
-                </span>
-              </li>
-            </ul>
+            <div className="p-5">
+              <div className="grid grid-cols-2 gap-2">
+                <div className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-600 flex-shrink-0" />
+                  <span className="text-sm text-gray-700">Sostenibilidad</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-600 flex-shrink-0" />
+                  <span className="text-sm text-gray-700">Cooperación</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-600 flex-shrink-0" />
+                  <span className="text-sm text-gray-700">Transparencia</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-600 flex-shrink-0" />
+                  <span className="text-sm text-gray-700">Innovación</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

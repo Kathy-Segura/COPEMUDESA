@@ -23,8 +23,6 @@ export default function GranosSection() {
 
         {/* Proceso de producción - Navegación lateral */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-yellow-800 mb-8 text-center">Proceso de Producción</h3>
-
           <div className="grid grid-cols-1 md:grid-cols-10 gap-6">
             {/* Navegación lateral - Ahora más ancha (4 columnas) */}
             <div className="md:col-span-4">
@@ -317,84 +315,95 @@ export default function GranosSection() {
           </div>
         </div>
 
-        {/* Tipos de granos */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-yellow-800 mb-8 text-center">Nuestros Granos Básicos</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Frijol */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
-              <div className="relative h-48">
-                <Image src="/placeholder.svg?height=400&width=600" alt="Frijol Rojo" fill className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute bottom-4 left-4">
-                  <h4 className="text-white font-bold">Frijol Rojo</h4>
-                </div>
-              </div>
-              <div className="p-5">
-                <div className="flex justify-between items-center mb-3">
-                  <span className="text-sm font-medium text-yellow-800">Rendimiento:</span>
-                  <span className="text-sm font-medium text-gray-700">15-20 qq/mz</span>
-                </div>
-                <p className="text-sm text-gray-600">
-                  Pilar de la dieta nicaragüense, cultivamos variedades criollas adaptadas a nuestro clima con alto
-                  valor nutricional.
-                </p>
-              </div>
+         {/* Basic Grains Section */}
+          <div className="container mx-auto px-4">
+            <div className="mb-16 text-center">
+              <h3 className="text-2xl font-bold text-amber-500 mb-8 text-center">Nuestras Variedades</h3>
             </div>
 
-            {/* Maíz */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
-              <div className="relative h-48">
-                <Image src="/placeholder.svg?height=400&width=600" alt="Maíz Criollo" fill className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute bottom-4 left-4">
-                  <h4 className="text-white font-bold">Maíz Criollo</h4>
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+              {/* Imágenes pequeñas alineadas a la derecha */}
+              <div className="space-y-8 ml-auto">
+                {/* Grain Product 1 */}
+                <div className="group flex gap-6 rounded-xl bg-white p-4 shadow-sm transition-all hover:shadow-md">
+                  <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg">
+                    <Image src="/frijoles.jpg?height=200&width=200" alt="Frijol Rojo" fill className="object-cover" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="mb-2 text-lg font-bold text-gray-900">Frijol Rojo</h3>
+                    <p className="mb-3 text-sm text-gray-600">
+                      Frijol rojo tradicional nicaragüense, con excelente sabor y textura. Ideal para gallo pinto y otros platos típicos.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="p-5">
-                <div className="flex justify-between items-center mb-3">
-                  <span className="text-sm font-medium text-yellow-800">Rendimiento:</span>
-                  <span className="text-sm font-medium text-gray-700">25-35 qq/mz</span>
-                </div>
-                <p className="text-sm text-gray-600">
-                  Cultivado siguiendo tradiciones ancestrales, preservamos variedades locales como el Olote Rojo y
-                  Pujagua.
-                </p>
-              </div>
-            </div>
 
-            {/* Sorgo */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
-              <div className="relative h-48">
-                <Image src="/placeholder.svg?height=400&width=600" alt="Sorgo" fill className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute bottom-4 left-4">
-                  <h4 className="text-white font-bold">Sorgo</h4>
+                {/* Grain Product 2 */}
+                <div className="group flex gap-6 rounded-xl bg-white p-4 shadow-sm transition-all hover:shadow-md">
+                  <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg">
+                    <Image src="/maiz.jpg?height=200&width=200" alt="Maíz Criollo" fill className="object-cover" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="mb-2 text-lg font-bold text-gray-900">Maíz Criollo</h3>
+                    <p className="mb-3 text-sm text-gray-600">
+                      Maíz de variedades locales, perfecto para tortillas, tamales y otros platillos tradicionales.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Grain Product 3 */}
+                <div className="group flex gap-6 rounded-xl bg-white p-4 shadow-sm transition-all hover:shadow-md">
+                  <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg">
+                    <Image src="/arroz.jpg?height=200&width=200" alt="Arroz de Secano" fill className="object-cover" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="mb-2 text-lg font-bold text-gray-900">Arroz de Secano</h3>
+                    <p className="mb-3 text-sm text-gray-600">
+                      Arroz cultivado con técnicas tradicionales, con excelente rendimiento y sabor característico.
+                    </p>
+                   
+                  </div>
+                </div>
+
+                {/* Grain Product 4 */}
+                <div className="group flex gap-6 rounded-xl bg-white p-4 shadow-sm transition-all hover:shadow-md">
+                  <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg">
+                    <Image src="/sorgo.jpg?height=200&width=200" alt="Sorgo" fill className="object-cover" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="mb-2 text-lg font-bold text-gray-900">Sorgo</h3>
+                    <p className="mb-3 text-sm text-gray-600">
+                      Cereal resistente a la sequía, utilizado para alimentación animal y elaboración de productos tradicionales.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="p-5">
-                <div className="flex justify-between items-center mb-3">
-                  <span className="text-sm font-medium text-yellow-800">Rendimiento:</span>
-                  <span className="text-sm font-medium text-gray-700">30-40 qq/mz</span>
+
+              {/* Contenedor de imágenes grandes */}
+              <div className="space-y-8">
+                {/* Imagen grande 1 */}
+                <div className="relative overflow-hidden rounded-2xl">
+                  <Image
+                    src="/granosmaiz.jpg"
+                    alt="Granos Básicos"
+                    width={800}
+                    height={600}
+                    className="w-full rounded-2xl object-cover"
+                  />
                 </div>
-                <p className="text-sm text-gray-600">
-                  Cultivo resistente a la sequía, utilizado tanto para consumo humano como animal, fundamental para la
-                  seguridad alimentaria.
-                </p>
+
+                {/* Imagen grande 2 (Debajo de la primera) */}
+                <div className="relative overflow-hidden rounded-2xl">
+                  <Image
+                    src="/granosfrijoles.jpg"
+                    alt="Granos Básicos Adicional"
+                    width={800}
+                    height={600}
+                    className="w-full rounded-2xl object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="mt-16 text-center">
-          <a
-            href="#"
-            className="inline-flex items-center rounded-full border border-yellow-700 px-6 py-3 text-sm font-medium text-yellow-700 transition hover:bg-yellow-50"
-          >
-            Conoce más sobre nuestros granos básicos
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </a>
-        </div>
       </div>
     </section>
   )

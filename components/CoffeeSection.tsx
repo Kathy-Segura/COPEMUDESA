@@ -7,6 +7,14 @@ import { ArrowRight, Coffee, Sun, Droplet, Flame, Wind} from "lucide-react"
 export default function CoffeeSection() {
   const [activeStep, setActiveStep] = useState(1)
 
+  // Imágenes correspondientes a cada paso
+  const stepImages: { [key: number]: string } = {
+    1: "/cultivocafe.jpg",
+    2: "/cosechacafe.jpg",
+    3: "/procesocafe.jpg",
+    4: "/tostadocafe.jpg",
+  }
+
   return (
     <section className="py-24 bg-[#f8f5f1]">
       <div className="container mx-auto px-4">
@@ -21,55 +29,33 @@ export default function CoffeeSection() {
           </p>
         </div>
 
-        {/* Proceso de producción - Estilo horizontal con tarjetas */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-amber-800 mb-8 text-center">Proceso de Producción</h3>
 
-          {/* Selector de pasos */}
+          {/* Botones de navegación */}
           <div className="flex justify-center mb-12">
             <div className="bg-white rounded-full shadow-md p-1 inline-flex">
-              <button
-                onClick={() => setActiveStep(1)}
-                className={`rounded-full px-6 py-3 text-sm font-medium transition ${
-                  activeStep === 1 ? "bg-amber-100 text-amber-800" : "text-gray-600 hover:bg-gray-100"
-                }`}
-              >
-                Cultivo
-              </button>
-              <button
-                onClick={() => setActiveStep(2)}
-                className={`rounded-full px-6 py-3 text-sm font-medium transition ${
-                  activeStep === 2 ? "bg-amber-100 text-amber-800" : "text-gray-600 hover:bg-gray-100"
-                }`}
-              >
-                Cosecha
-              </button>
-              <button
-                onClick={() => setActiveStep(3)}
-                className={`rounded-full px-6 py-3 text-sm font-medium transition ${
-                  activeStep === 3 ? "bg-amber-100 text-amber-800" : "text-gray-600 hover:bg-gray-100"
-                }`}
-              >
-                Procesamiento
-              </button>
-              <button
-                onClick={() => setActiveStep(4)}
-                className={`rounded-full px-6 py-3 text-sm font-medium transition ${
-                  activeStep === 4 ? "bg-amber-100 text-amber-800" : "text-gray-600 hover:bg-gray-100"
-                }`}
-              >
-                Tostado
-              </button>
+              {["Cultivo", "Cosecha", "Procesamiento", "Tostado"].map((label, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveStep(index + 1)}
+                  className={`rounded-full px-6 py-3 text-sm font-medium transition ${
+                    activeStep === index + 1 ? "bg-amber-100 text-amber-800" : "text-gray-600 hover:bg-gray-100"
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
             </div>
           </div>
 
-          {/* Contenido del paso - Estilo horizontal */}
+          {/* Contenido del paso */}
           <div className="bg-white rounded-2xl shadow-md overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-              {/* Imagen lateral */}
+              {/* Imagen lateral dinámica */}
               <div className="relative h-64 md:h-auto">
                 <Image
-                  src={`/placeholder.svg?height=600&width=400&text=Paso ${activeStep}`}
+                  src={stepImages[activeStep]}
                   alt={`Paso ${activeStep} del proceso del café`}
                   fill
                   className="object-cover"
@@ -82,7 +68,7 @@ export default function CoffeeSection() {
                 </div>
               </div>
 
-              {/* Contenido */}
+              {/* Contenido textual */}
               <div className="md:col-span-2 p-8">
                 {activeStep === 1 && (
                   <>

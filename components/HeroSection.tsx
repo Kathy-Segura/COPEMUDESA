@@ -38,7 +38,7 @@ export default function HeroSection() {
       mainLabel: "Café Premium",
     },
     {
-      main: "/granos004.jpg?height=600&width=400",
+      main: "/granosbasicos3.jpg?height=600&width=400",
       topRight: "/miel01.jpg?height=200&width=200",
       bottomRight: "/cafe04.jpg?height=300&width=200",
       mainAlt: "Granos de Estelí",

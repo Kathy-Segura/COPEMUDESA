@@ -21,15 +21,17 @@ export default function GranosSection() {
           </p>
         </div>
 
+         <div className="mb-16 text-center">
+              <h3 className="text-2xl font-bold text-amber-500 mb-8 text-center">Proceso de Producción</h3>
+         </div>
+      
         {/* Proceso de producción - Navegación lateral */}
         <div className="mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-10 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-10 gap-8">
+            
             {/* Navegación lateral - Ahora más ancha (4 columnas) */}
             <div className="md:col-span-4">
               <div className="bg-white rounded-xl shadow-md h-full">
-                <div className="p-5 border-b border-yellow-100">
-                  <h4 className="text-lg font-bold text-yellow-800">Etapas del Proceso</h4>
-                </div>
                 <div className="p-4 flex flex-col h-[calc(100%-70px)]">
                   <div className="flex flex-col divide-y divide-yellow-50 h-full justify-between">
                     <button
@@ -119,14 +121,15 @@ export default function GranosSection() {
               </div>
             </div>
 
-            {/* Contenido principal - Ahora 6 columnas */}
+            {/* Tarjetas con informacion*/}
             <div className="md:col-span-6">
               <div className="bg-white rounded-xl shadow-md overflow-hidden">
+
                 {activeStep === 1 && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-0 text-sm">
                     <div className="relative h-64 md:h-auto">
                       <Image
-                        src="/placeholder.svg?height=400&width=600"
+                        src="/prepararterreno.jpg?height=400&width=600"
                         alt="Preparación de Terreno"
                         fill
                         className="object-cover"
@@ -168,7 +171,7 @@ export default function GranosSection() {
                 )}
 
                 {activeStep === 2 && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-0 text-sm">
                     <div className="p-8 order-2 md:order-1">
                       <div className="flex items-center gap-4 mb-6">
                         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-yellow-100 text-yellow-700 shrink-0">
@@ -198,7 +201,7 @@ export default function GranosSection() {
                     </div>
                     <div className="relative h-64 md:h-auto order-1 md:order-2">
                       <Image
-                        src="/placeholder.svg?height=400&width=600"
+                        src="/sembriofrijoles.jpg?height=400&width=600"
                         alt="Siembra de Granos"
                         fill
                         className="object-cover"
@@ -214,10 +217,10 @@ export default function GranosSection() {
                 )}
 
                 {activeStep === 3 && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-0 text-sm">
                     <div className="relative h-64 md:h-auto">
                       <Image
-                        src="/placeholder.svg?height=400&width=600"
+                        src="/cultivocosecha.jpg?height=400&width=600"
                         alt="Cultivo de Granos"
                         fill
                         className="object-cover"
@@ -260,7 +263,7 @@ export default function GranosSection() {
                 )}
 
                 {activeStep === 4 && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-0 text-sm"> {/*con la prop text-sm reducimos el tamaño del grid*/}
                     <div className="p-8 order-2 md:order-1">
                       <div className="flex items-center gap-4 mb-6">
                         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-yellow-100 text-yellow-700 shrink-0">
@@ -296,7 +299,7 @@ export default function GranosSection() {
                     </div>
                     <div className="relative h-64 md:h-auto order-1 md:order-2">
                       <Image
-                        src="/placeholder.svg?height=400&width=600"
+                        src="/cultivofrijoles.jpg?height=400&width=600"
                         alt="Cosecha de Granos"
                         fill
                         className="object-cover"

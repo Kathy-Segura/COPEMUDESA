@@ -25,7 +25,7 @@ export default function MisionVisionValores() {
           <div className="bg-white rounded-xl shadow-md overflow-hidden transform transition-all hover:shadow-lg">
             <div className="h-32 relative">
               <Image
-                src="/placeholder.svg?height=300&width=500"
+                src="/mision.png?height=300&width=500"
                 alt="Misión de la Cooperativa"
                 fill
                 className="object-cover"
@@ -53,7 +53,7 @@ export default function MisionVisionValores() {
           <div className="bg-white rounded-xl shadow-md overflow-hidden transform transition-all hover:shadow-lg">
             <div className="h-32 relative">
               <Image
-                src="/placeholder.svg?height=300&width=500"
+                src="/vision.png?height=300&width=500"
                 alt="Visión de la Cooperativa"
                 fill
                 className="object-cover"
@@ -82,7 +82,7 @@ export default function MisionVisionValores() {
           <div className="bg-white rounded-xl shadow-md overflow-hidden transform transition-all hover:shadow-lg">
             <div className="h-32 relative">
               <Image
-                src="/placeholder.svg?height=300&width=500"
+                src="/valores.jpg?height=300&width=500"
                 alt="Valores de la Cooperativa"
                 fill
                 className="object-cover"

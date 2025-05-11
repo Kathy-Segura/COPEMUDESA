@@ -1,10 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Coffee, Wheat,Droplet, Leaf, ArrowRight, Flower} from "lucide-react"
+import { Coffee, Wheat,Droplet, Leaf, ArrowRight, Flower, GlassWater} from "lucide-react"
 
 export default function CategorySection() {
   return (
-    <section id="category" className="py-24">
+    <section id="category" className="py-12">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <span className="inline-block rounded-full bg-green-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-green-800 mb-4">
@@ -90,11 +90,11 @@ export default function CategorySection() {
             </div>
           </Link>
 
-           {/* Miel */}
+           {/* Category 4 */}
           <Link href="#miel" className="group">
             <div className="relative h-96 w-full overflow-hidden rounded-2xl">
               <Image
-                src="/miel.jpg?height=800&width=600"
+                src="/miel01.jpg?height=800&width=600"
                 alt="Miel"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"

@@ -73,7 +73,7 @@ export default function VegetablesSection() {
             {/* Contenido de la pestaña */}
             <div className="p-8">
               {activeStep === 1 && (
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-8 text-sm">
                   <div className="md:col-span-7">
                     <div className="flex items-center gap-4 mb-6">
                       <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-green-700 shrink-0">
@@ -167,7 +167,7 @@ export default function VegetablesSection() {
               )}
 
               {activeStep === 3 && (
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-8 text-sm">
                   <div className="md:col-span-7">
                     <div className="flex items-center gap-4 mb-6">
                       <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-green-700 shrink-0">
@@ -204,7 +204,7 @@ export default function VegetablesSection() {
                   <div className="md:col-span-5">
                     <div className="relative h-64 md:h-full rounded-xl overflow-hidden shadow-md">
                       <Image
-                        src="/placeholder.svg?height=600&width=400"
+                        src="/  ?height=600&width=300"
                         alt="Manejo de Cultivo de Hortalizas"
                         fill
                         className="object-cover"
@@ -215,7 +215,7 @@ export default function VegetablesSection() {
               )}
 
               {activeStep === 4 && (
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-8 text-sm">
                   <div className="md:col-span-5 order-2 md:order-1">
                     <div className="relative h-64 md:h-full rounded-xl overflow-hidden shadow-md">
                       <Image

@@ -113,7 +113,7 @@ export default function VegetablesSection() {
                   <div className="md:col-span-5">
                     <div className="relative h-64 md:h-full rounded-xl overflow-hidden shadow-md">
                       <Image
-                        src="/placeholder.svg?height=600&width=400"
+                        src="/semilleros.jpg?height=600&width=400"
                         alt="Semilleros de Hortalizas"
                         fill
                         className="object-cover"
@@ -128,7 +128,7 @@ export default function VegetablesSection() {
                   <div className="md:col-span-5 order-2 md:order-1">
                     <div className="relative h-64 md:h-full rounded-xl overflow-hidden shadow-md">
                       <Image
-                        src="/placeholder.svg?height=600&width=400"
+                        src="/trasplante2.jpg?height=600&width=400"
                         alt="Transplante de Hortalizas"
                         fill
                         className="object-cover"
@@ -179,23 +179,23 @@ export default function VegetablesSection() {
                       Durante el crecimiento, implementamos prácticas agroecológicas para el manejo de plagas y
                       enfermedades, utilizando biopreparados y fomentando la biodiversidad para un cultivo saludable.
                     </p>
-                    <div className="bg-green-50 rounded-lg p-5">
-                      <h5 className="font-bold text-gray-900 mb-3">Técnicas de Manejo Sostenible</h5>
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="text-center p-3 rounded-lg bg-white shadow-sm">
-                          <Sprout className="h-6 w-6 text-green-600 mx-auto mb-2" />
+                    <div className="bg-green-50 rounded-lg p-3">
+                      <h5 className="font-bold text-gray-900 text-sm mb-0">Técnicas de Manejo Sostenible</h5>
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="text-center p-2 rounded-lg bg-white shadow-sm">
+                          <Sprout className="h-4 w-4 text-green-600 mx-auto mb-2" />
                           <p className="text-sm font-medium text-gray-700">Cultivos trampa</p>
                         </div>
                         <div className="text-center p-3 rounded-lg bg-white shadow-sm">
-                          <Leaf className="h-6 w-6 text-green-600 mx-auto mb-2" />
+                          <Leaf className="h-4 w-4 text-green-600 mx-auto mb-2" />
                           <p className="text-sm font-medium text-gray-700">Extractos botánicos</p>
                         </div>
                         <div className="text-center p-3 rounded-lg bg-white shadow-sm">
-                          <Sun className="h-6 w-6 text-green-600 mx-auto mb-2" />
+                          <Sun className="h-4 w-4 text-green-600 mx-auto mb-2" />
                           <p className="text-sm font-medium text-gray-700">Podas sanitarias</p>
                         </div>
                         <div className="text-center p-3 rounded-lg bg-white shadow-sm">
-                          <Droplet className="h-6 w-6 text-green-600 mx-auto mb-2" />
+                          <Droplet className="h-4 w-4 text-green-600 mx-auto mb-2" />
                           <p className="text-sm font-medium text-gray-700">Riego por goteo</p>
                         </div>
                       </div>
@@ -204,7 +204,7 @@ export default function VegetablesSection() {
                   <div className="md:col-span-5">
                     <div className="relative h-64 md:h-full rounded-xl overflow-hidden shadow-md">
                       <Image
-                        src="/  ?height=600&width=300"
+                        src="/manejocultivos.jpg?height=600&width=300"
                         alt="Manejo de Cultivo de Hortalizas"
                         fill
                         className="object-cover"
@@ -219,7 +219,7 @@ export default function VegetablesSection() {
                   <div className="md:col-span-5 order-2 md:order-1">
                     <div className="relative h-64 md:h-full rounded-xl overflow-hidden shadow-md">
                       <Image
-                        src="/placeholder.svg?height=600&width=400"
+                        src="/cosechacultivos.jpg?height=600&width=400"
                         alt="Cosecha de Hortalizas"
                         fill
                         className="object-cover"

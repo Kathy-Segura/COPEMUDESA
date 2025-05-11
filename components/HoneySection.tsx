@@ -13,29 +13,13 @@ export default function HoneySection() {
       title: "Establecimiento de Apiarios",
       description:
         "Ubicamos estratégicamente nuestros apiarios en zonas con abundante floración y lejos de fuentes de contaminación, asegurando un ambiente ideal para nuestras abejas y la producción de miel de alta calidad.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/apiarios.jpg?height=400&width=600",
       details: [
         "Selección cuidadosa de ubicaciones con flora melífera diversa",
         "Diseño de colmenas adaptadas al clima local",
         "Mantenimiento de distancias adecuadas entre apiarios",
       ],
       icon: <Beehive className="w-6 h-6" />,
-      color: "bg-amber-100",
-      lightColor: "bg-amber-50",
-      textColor: "text-amber-600",
-      borderColor: "border-amber-200",
-    },
-    {
-      title: "Manejo de Colmenas",
-      description:
-        "Realizamos un manejo respetuoso de las colmenas, monitoreando constantemente la salud de las abejas y asegurando que tengan los recursos necesarios para su desarrollo óptimo.",
-      image: "/placeholder.svg?height=400&width=600",
-      details: [
-        "Revisiones periódicas sin perturbar excesivamente a las abejas",
-        "Control natural de plagas y enfermedades",
-        "Suplementación alimenticia en épocas de escasez",
-      ],
-      icon: <Flower className="w-6 h-6" />,
       color: "bg-rose-100",
       lightColor: "bg-rose-50",
       textColor: "text-rose-600",
@@ -45,35 +29,51 @@ export default function HoneySection() {
       title: "Cosecha de Miel",
       description:
         "Cosechamos la miel en el momento óptimo de maduración, cuando las abejas han completado el proceso de transformación del néctar y han sellado las celdas con cera, garantizando así su calidad.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/cosechamiel.jpg?height=400&width=600",
       details: [
         "Selección de panales con miel madura y operculada",
         "Extracción mediante centrifugado en frío",
         "Cosecha parcial que deja reservas suficientes para las abejas",
       ],
       icon: <Droplet className="w-6 h-6" />,
-      color: "bg-yellow-100",
-      lightColor: "bg-yellow-50",
-      textColor: "text-yellow-600",
-      borderColor: "border-yellow-200",
-    },
-    {
-      title: "Procesamiento y Envasado",
-      description:
-        "Procesamos la miel de manera mínima para preservar todas sus propiedades naturales. Filtramos suavemente para eliminar impurezas y envasamos en recipientes que mantienen su calidad.",
-      image: "/placeholder.svg?height=400&width=600",
-      details: [
-        "Filtrado que preserva el polen y propiedades naturales",
-        "Control de calidad riguroso en cada lote",
-        "Envasado en recipientes de vidrio que conservan propiedades",
-      ],
-      icon: <Flask className="w-6 h-6" />,
       color: "bg-orange-100",
       lightColor: "bg-orange-50",
       textColor: "text-orange-600",
       borderColor: "border-orange-200",
     },
-  ]
+    {
+      title: "Divisiones",
+      description:
+        "Realizamos divisiones estratégicas de las colmenas fuertes para aumentar el número de núcleos, controlar la enjambrazón natural y asegurar una población saludable y productiva.",
+      image: "/divisiones.jpg?height=400&width=600",
+      details: [
+        "Identificación de colmenas con población y reservas adecuadas",
+        "Creación de núcleos con cría, abejas y alimentos",
+        "Uso de reinas fecundadas o celdas reales para nuevas colmenas",
+      ],
+      icon: <Flower className="w-6 h-6" />,
+      color: "bg-green-100",
+      lightColor: "bg-green-50",
+      textColor: "text-green-600",
+      borderColor: "border-green-200",
+    },
+    {
+      title: "Transumancia",
+      description:
+        "Movemos nuestros apiarios según la floración estacional para aprovechar al máximo los recursos naturales, garantizando una alimentación continua y diversidad en la producción de miel.",
+      image: "/transumancia.jpg?height=400&width=600",
+      details: [
+        "Planificación de rutas basadas en calendarios florales",
+        "Transporte cuidadoso de colmenas con mínima alteración",
+        "Adaptación rápida de las abejas al nuevo entorno",
+      ],
+      icon: <Flask className="w-6 h-6" />,
+      color: "bg-purple-100",
+      lightColor: "bg-purple-50",
+      textColor: "text-purple-600",
+      borderColor: "border-purple-200",
+  },
+]
 
   return (
     <section id="miel" className="py-24 bg-[#f9f8f5] relative overflow-hidden">

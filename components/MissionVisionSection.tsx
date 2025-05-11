@@ -25,7 +25,7 @@ export default function MisionVisionValores() {
           <div className="bg-white rounded-xl shadow-md overflow-hidden transform transition-all hover:shadow-lg">
             <div className="h-32 relative">
               <Image
-                src="/mision.png?height=300&width=500"
+                src="/mision.jpeg?height=300&width=500"
                 alt="Misión de la Cooperativa"
                 fill
                 className="object-cover"
@@ -42,9 +42,9 @@ export default function MisionVisionValores() {
             </div>
             <div className="p-5">
               <p className="text-gray-700 text-sm">
-                Somos una cooperativa agrícola comprometida con el desarrollo sostenible de Matagalpa, implementando
-                procesos de producción que respetan el medio ambiente, preservan nuestras tradiciones y mejoran la
-                calidad de vida de nuestros asociados y sus familias.
+                Somos una cooperativa multisectorial de mujeres que impulsa el desarrollo socioeconómico mediante 
+                la producción agroecológica, fomentando la autosostenibilidad, la diversificación productiva y el 
+                empoderamiento organizativo, con proyección comercial a nivel nacional e internacional.
               </p>
             </div>
           </div>
@@ -70,9 +70,9 @@ export default function MisionVisionValores() {
             </div>
             <div className="p-5">
               <p className="text-gray-700 text-sm">
-                Ser una cooperativa líder en la producción agrícola sostenible en Nicaragua, reconocida
-                internacionalmente por la excelencia de nuestros procesos, la calidad de nuestros productos y nuestro
-                impacto positivo en la comunidad y el medio ambiente.
+                Ser una cooperativa líder en el desarrollo integral de mujeres campesinas, impulsando la economía 
+                sustentable en la cooperativa, comunidad y familia, para fortalecer el desarrollo social, económico 
+                y la defensa de sus derechos humanos y medios de vida.
               </p>
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function MisionVisionValores() {
           <div className="bg-white rounded-xl shadow-md overflow-hidden transform transition-all hover:shadow-lg">
             <div className="h-32 relative">
               <Image
-                src="/valores.jpg?height=300&width=500"
+                src="/valores.jpeg?height=300&width=500"
                 alt="Valores de la Cooperativa"
                 fill
                 className="object-cover"
@@ -114,6 +114,14 @@ export default function MisionVisionValores() {
                 <div className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-green-600 flex-shrink-0" />
                   <span className="text-sm text-gray-700">Innovación</span>
+                </div>
+                 <div className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-600 flex-shrink-0" />
+                  <span className="text-sm text-gray-700">Solidaridad</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-600 flex-shrink-0" />
+                  <span className="text-sm text-gray-700">Igualdad</span>
                 </div>
               </div>
             </div>

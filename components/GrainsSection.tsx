@@ -356,12 +356,12 @@ export default function GranosSection() {
                 {/* Grain Product 3 */}
                 <div className="group flex gap-6 rounded-xl bg-white p-4 shadow-sm transition-all hover:shadow-md">
                   <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg">
-                    <Image src="/arroz.jpg?height=200&width=200" alt="Arroz de Secano" fill className="object-cover" />
+                    <Image src="/frijoldor.jpg?height=200&width=200" alt="Frijol Dor" fill className="object-cover" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="mb-2 text-lg font-bold text-gray-900">Arroz de Secano</h3>
+                    <h3 className="mb-2 text-lg font-bold text-gray-900">Frijol Dor</h3>
                     <p className="mb-3 text-sm text-gray-600">
-                      Arroz cultivado con técnicas tradicionales, con excelente rendimiento y sabor característico.
+                      Frijoles cultivados con técnicas tradicionales, con excelente rendimiento y sabor característico.
                     </p>
                    
                   </div>
@@ -373,7 +373,7 @@ export default function GranosSection() {
                     <Image src="/sorgo.jpg?height=200&width=200" alt="Sorgo" fill className="object-cover" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="mb-2 text-lg font-bold text-gray-900">Sorgo</h3>
+                    <h3 className="mb-2 text-lg font-bold text-gray-900">Sorgo-millón</h3>
                     <p className="mb-3 text-sm text-gray-600">
                       Cereal resistente a la sequía, utilizado para alimentación animal y elaboración de productos tradicionales.
                     </p>

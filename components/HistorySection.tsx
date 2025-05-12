@@ -29,11 +29,11 @@ export default function HistorySection() {
                 </div>
                 <div className="bg-white rounded-xl shadow-md p-5 text-center h-full">
                   <span className="inline-block rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800 mb-2">
-                    1985
+                    2011
                   </span>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">Fundación</h3>
                   <p className="text-sm text-gray-600">
-                    25 pequeños agricultores se unieron para enfrentar los desafíos económicos y sociales.
+                    18 mujeres agricultoras se unieron para enfrentar los desafíos económicos y sociales.
                   </p>
                 </div>
               </div>
@@ -47,11 +47,11 @@ export default function HistorySection() {
                 </div>
                 <div className="bg-white rounded-xl shadow-md p-5 text-center h-full">
                   <span className="inline-block rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800 mb-2">
-                    1995
+                    2022
                   </span>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">Crecimiento</h3>
                   <p className="text-sm text-gray-600">
-                    Expansión a más de 100 miembros y diversificación de cultivos con prácticas sostenibles.
+                    Expansión a más de 25 miembros y diversificación de cultivos con prácticas sostenibles.
                   </p>
                 </div>
               </div>
@@ -65,11 +65,11 @@ export default function HistorySection() {
                 </div>
                 <div className="bg-white rounded-xl shadow-md p-5 text-center h-full">
                   <span className="inline-block rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800 mb-2">
-                    2005
+                    2019
                   </span>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">Certificación</h3>
                   <p className="text-sm text-gray-600">
-                    Primera certificación orgánica, abriendo puertas a mercados internacionales.
+                   Primera certificación orgánica del MEFCCA, obteniendo el apoyo del consejo de administración.
                   </p>
                 </div>
               </div>
@@ -83,11 +83,11 @@ export default function HistorySection() {
                 </div>
                 <div className="bg-white rounded-xl shadow-md p-5 text-center h-full">
                   <span className="inline-block rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800 mb-2">
-                    Hoy
+                    2025
                   </span>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">Actualidad</h3>
                   <p className="text-sm text-gray-600">
-                    Más de 500 familias asociadas, innovando con tecnologías que respetan tradiciones.
+                    Más de 60 familias asociadas, innovando con tecnologías que respetan tradiciones.
                   </p>
                 </div>
               </div>
@@ -98,7 +98,7 @@ export default function HistorySection() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-2xl shadow-md overflow-hidden">
             <div className="lg:col-span-5 relative h-64 lg:h-full">
               <Image
-                src="/placeholder.svg?height=600&width=500"
+                src="/diosas.png?height=600&width=500"
                 alt="Historia de la Cooperativa"
                 fill
                 className="object-cover"
@@ -107,24 +107,25 @@ export default function HistorySection() {
             <div className="lg:col-span-7 p-8">
               <h3 className="text-2xl font-bold text-amber-800 mb-4">Nuestra Historia</h3>
               <p className="text-gray-700 mb-4">
-                La Cooperativa de Matagalpa nació en 1985, cuando un grupo de 25 pequeños agricultores decidieron unir
-                fuerzas para enfrentar los desafíos económicos y sociales de la época. En medio de un contexto difícil
-                para el país, estos visionarios sentaron las bases de lo que hoy es una de las cooperativas agrícolas
-                más importantes de Nicaragua.
+                La cooperativa COPEMUDESA fue fundada el 11 de julio de 2011 en la comunidad Payacuca, en el departamento
+                de Matagalpa, por un grupo de 18 mujeres emprendedoras decididas a mejorar sus condiciones de vida y las
+                de sus familias. Desde sus inicios, COPEMUDESA contó con el valioso apoyo médico, económico y material
+                de parte de la Cooperativa Central Las Diosas, lo cual permitió a sus integrantes fortalecer sus capacidades
+                organizativas y productivas.
               </p>
               <p className="text-gray-700 mb-4">
-                Durante la década de 1990, la cooperativa experimentó un crecimiento significativo, expandiéndose a más
-                de 100 miembros y diversificando sus cultivos. Fue en esta época cuando comenzamos a implementar
-                prácticas más sostenibles de producción, sentando las bases para nuestro compromiso con el medio
-                ambiente.
+                A lo largo de los años, la cooperativa se ha consolidado como un espacio de empoderamiento femenino y 
+                desarrollo sostenible. Con una base firme en la solidaridad y el trabajo colectivo, COPEMUDESA ha 
+                contribuido al bienestar de su comunidad, promoviendo modelos productivos responsables y una visión
+                transformadora del rol de la mujer en el ámbito rural.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
                 <div className="text-center p-3 rounded-lg bg-amber-50">
-                  <p className="text-2xl font-bold text-amber-700">35+</p>
+                  <p className="text-2xl font-bold text-amber-700">14+</p>
                   <p className="text-xs text-gray-700">Años de historia</p>
                 </div>
                 <div className="text-center p-3 rounded-lg bg-amber-50">
-                  <p className="text-2xl font-bold text-amber-700">500+</p>
+                  <p className="text-2xl font-bold text-amber-700">60+</p>
                   <p className="text-xs text-gray-700">Familias asociadas</p>
                 </div>
                 <div className="text-center p-3 rounded-lg bg-amber-50">
@@ -132,7 +133,7 @@ export default function HistorySection() {
                   <p className="text-xs text-gray-700">Líneas de producción</p>
                 </div>
                 <div className="text-center p-3 rounded-lg bg-amber-50">
-                  <p className="text-2xl font-bold text-amber-700">12</p>
+                  <p className="text-2xl font-bold text-amber-700">3</p>
                   <p className="text-xs text-gray-700">Comunidades</p>
                 </div>
               </div>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { ArrowRight, Coffee, Sun, Droplet, Flame, Wind} from "lucide-react"
+import { ArrowRight, Coffee, Sun, Droplet, Flame, Wind, Sparkles, Palette} from "lucide-react"
 
 export default function CoffeeSection() {
   const [activeStep, setActiveStep] = useState(1)
@@ -12,7 +12,7 @@ export default function CoffeeSection() {
     1: "/cultivocafe.jpg",
     2: "/cosechacafe.jpg",
     3: "/procesocafe.jpg",
-    4: "/tostadocafe.jpg",
+    4: "/entregacafe.jpg",
   }
 
   return (
@@ -35,7 +35,7 @@ export default function CoffeeSection() {
           {/* Botones de navegación */}
           <div className="flex justify-center mb-12">
             <div className="bg-white rounded-full shadow-md p-1 inline-flex">
-              {["Cultivo", "Cosecha", "Procesamiento", "Tostado"].map((label, index) => (
+              {["Cultivo", "Cosecha", "Procesamiento", "Entrega"].map((label, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveStep(index + 1)}
@@ -166,38 +166,38 @@ export default function CoffeeSection() {
                   </>
                 )}
 
-                {activeStep === 4 && (
-                  <>
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-100 text-amber-700 shrink-0">
-                        <Coffee className="h-6 w-6" />
-                      </div>
-                      <h4 className="text-2xl font-bold text-amber-800">Tostado</h4>
+             {activeStep === 4 && (
+              <>
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-100 text-amber-700 shrink-0">
+                    <Coffee className="h-6 w-6" />
+                  </div>
+                  <h4 className="text-2xl font-bold text-amber-800">Entrega</h4>
+                </div>
+                <p className="text-gray-700 mb-6">
+                  La entrega del café se realiza en pequeños lotes para asegurar el control de calidad. 
+                  Cada socia entrega su producción luego de un cuidadoso proceso de despulpado y lavado,
+                  garantizando así la frescura y la limpieza del grano antes de su secado y comercialización.
+                </p>
+                <div className="bg-amber-50 rounded-lg p-4">
+                  <h5 className="font-bold text-gray-900 mb-4">Estado del Café</h5>
+                  <div className="flex justify-around items-center gap-4">
+                    <div className="flex flex-col items-center">
+                      <Droplet className="h-6 w-6 text-amber-600 mb-1" />
+                      <span className="text-sm font-medium text-gray-700">Fresco</span>
                     </div>
-                    <p className="text-gray-700 mb-6">
-                      El tostado se realiza en pequeños lotes para mantener el control de calidad. Cada variedad tiene
-                      su propio perfil de tueste, diseñado para resaltar sus características únicas y desarrollar los
-                      mejores aromas y sabores.
-                    </p>
-                    <div className="bg-amber-50 rounded-lg p-4">
-                      <h5 className="font-bold text-gray-900 mb-2">Perfiles de Tueste</h5>
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-3 h-3 rounded-full bg-amber-300"></div>
-                        <span className="text-sm text-gray-700">Claro: Para resaltar acidez y notas florales</span>
-                      </div>
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-3 h-3 rounded-full bg-amber-500"></div>
-                        <span className="text-sm text-gray-700">Medio: Balance entre acidez y cuerpo</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <div className="w-3 h-3 rounded-full bg-amber-800"></div>
-                        <span className="text-sm text-gray-700">
-                          Oscuro: Para resaltar cuerpo y notas achocolatadas
-                        </span>
-                      </div>
+                    <div className="flex flex-col items-center">
+                      <Sparkles className="h-6 w-6 text-amber-600 mb-1" />
+                      <span className="text-sm font-medium text-gray-700">Lavado</span>
                     </div>
-                  </>
-                )}
+                    <div className="flex flex-col items-center">
+                      <Palette className="h-6 w-6 text-amber-600 mb-1" />
+                      <span className="text-sm font-medium text-gray-700">Color uniforme</span>
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
               </div>
             </div>
           </div>
@@ -210,7 +210,7 @@ export default function CoffeeSection() {
             {/* Variedad 1 */}
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=300&width=400" alt="Café Bourbon" fill className="object-cover" />
+                <Image src="/cafeburbon.jpg?height=300&width=400" alt="Café Bourbon" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
                   <h4 className="text-white font-bold">Bourbon</h4>
@@ -232,7 +232,7 @@ export default function CoffeeSection() {
             {/* Variedad 2 */}
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=300&width=400" alt="Café Caturra" fill className="object-cover" />
+                <Image src="/cafecaturra.jpg?height=300&width=400" alt="Café Caturra" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
                   <h4 className="text-white font-bold">Caturra</h4>
@@ -254,37 +254,15 @@ export default function CoffeeSection() {
             {/* Variedad 3 */}
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=300&width=400" alt="Café Pacamara" fill className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute bottom-4 left-4">
-                  <h4 className="text-white font-bold">Pacamara</h4>
-                </div>
-              </div>
-              <div className="p-5">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs font-medium text-amber-800">Perfil:</span>
-                  <div className="flex-1 h-1.5 bg-gray-200 rounded-full overflow-hidden">
-                    <div className="bg-amber-500 h-full rounded-full" style={{ width: "95%" }}></div>
-                  </div>
-                </div>
-                <p className="text-sm text-gray-600">
-                  Notas florales, frutas tropicales y especias. Complejo, con acidez elegante.
-                </p>
-              </div>
-            </div>
-
-            {/* Variedad 4 */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
-              <div className="relative h-48">
                 <Image
-                  src="/placeholder.svg?height=300&width=400"
-                  alt="Café Maragogipe"
+                  src="/cafecatimor.jpg?height=300&width=400"
+                  alt="Café Catimor"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
-                  <h4 className="text-white font-bold">Maragogipe</h4>
+                  <h4 className="text-white font-bold">Catimor</h4>
                 </div>
               </div>
               <div className="p-5">
@@ -299,9 +277,30 @@ export default function CoffeeSection() {
                 </p>
               </div>
             </div>
+
+             {/* Variedad 4 */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
+              <div className="relative h-48">
+                <Image src="/cafepacamara.jpg?height=300&width=400" alt="Café Pacamara" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4">
+                  <h4 className="text-white font-bold">Pacamara</h4>
+                </div>
+              </div>
+              <div className="p-5">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-xs font-medium text-amber-800">Perfil:</span>
+                  <div className="flex-1 h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                    <div className="bg-amber-500 h-full rounded-full" style={{ width: "90%" }}></div>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-600">
+                  Notas florales, frutas tropicales y especias. Complejo, con acidez elegante.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-
         <div className="mt-16 text-center">
           <a
             href="#"

@@ -194,7 +194,7 @@ export default function HoneySection() {
             <div className="group bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md hover:-translate-y-1 border border-transparent hover:border-amber-100">
               <div className="relative h-48">
                 <Image
-                  src="/placeholder.svg?height=300&width=400"
+                  src="/mielmultifloral.png?height=300&width=400"
                   alt="Miel Multifloral"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -224,7 +224,7 @@ export default function HoneySection() {
             <div className="group bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md hover:-translate-y-1 border border-transparent hover:border-amber-100">
               <div className="relative h-48">
                 <Image
-                  src="/placeholder.svg?height=300&width=400"
+                  src="/mieldecafe.png?height=300&width=400"
                   alt="Miel de Café"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -254,7 +254,7 @@ export default function HoneySection() {
             <div className="group bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md hover:-translate-y-1 border border-transparent hover:border-amber-100">
               <div className="relative h-48">
                 <Image
-                  src="/placeholder.svg?height=300&width=400"
+                  src="/mieldelbosque.png?height=300&width=400"
                   alt="Miel de Bosque"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"

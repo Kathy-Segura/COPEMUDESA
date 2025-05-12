@@ -264,7 +264,7 @@ export default function VegetablesSection() {
             {/* Hortaliza 1 */}
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=300&width=400" alt="Tomates" fill className="object-cover" />
+                <Image src="/tomates.jpg?height=300&width=400" alt="Tomates" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
                   <h4 className="text-white font-bold">Tomates</h4>
@@ -284,10 +284,10 @@ export default function VegetablesSection() {
             {/* Hortaliza 2 */}
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=300&width=400" alt="Lechugas" fill className="object-cover" />
+                <Image src="/pepinos.jpg?height=300&width=400" alt="Pepinos" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
-                  <h4 className="text-white font-bold">Lechugas</h4>
+                  <h4 className="text-white font-bold">Pepinos</h4>
                 </div>
               </div>
               <div className="p-5">
@@ -304,7 +304,7 @@ export default function VegetablesSection() {
             {/* Hortaliza 3 */}
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=300&width=400" alt="Chiltomas" fill className="object-cover" />
+                <Image src="/chiltomas.jpg?height=300&width=400" alt="Chiltomas" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
                   <h4 className="text-white font-bold">Chiltomas</h4>
@@ -324,10 +324,10 @@ export default function VegetablesSection() {
             {/* Hortaliza 4 */}
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=300&width=400" alt="Zanahorias" fill className="object-cover" />
+                <Image src="/repollo.jpg?height=300&width=400" alt="Repollo" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
-                  <h4 className="text-white font-bold">Zanahorias</h4>
+                  <h4 className="text-white font-bold">Repollo</h4>
                 </div>
               </div>
               <div className="p-5">
@@ -336,7 +336,7 @@ export default function VegetablesSection() {
                   <span className="text-xs font-medium text-gray-700">Orgánico</span>
                 </div>
                 <p className="text-sm text-gray-600">
-                  Zanahorias dulces y crujientes, cultivadas en suelos sueltos y ricos en materia orgánica.
+                  Repollo fresco de hojas compactas y firmes, cultivados en suelos sueltos y ricos en materia orgánica.
                 </p>
               </div>
             </div>

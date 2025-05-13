@@ -10,21 +10,21 @@ export default function Footer() {
             <div className="mb-6 flex items-center gap-2">
               <div className="relative h-10 w-10 overflow-hidden rounded-full bg-green-100">
                 <Image
-                  src="/placeholder.svg?height=40&width=40"
+                  src="/coop.png?height=40&width=40"
                   alt="Logo"
                   width={40}
                   height={40}
                   className="object-cover"
                 />
               </div>
-              <span className="text-xl font-bold text-white">Estelí Agrícola</span>
+              <span className="text-xl font-bold text-white">Matagalpa Agrícola</span>
             </div>
             <p className="mb-6 text-gray-400">
-              Ofreciendo los mejores productos agrícolas de Estelí, Nicaragua, al mundo entero. Calidad, tradición y
+              Ofreciendo los mejores productos agrícolas de Matagalpa, Nicaragua, al mundo entero. Calidad, tradición y
               sostenibilidad en cada producto.
             </p>
             <p className="text-gray-400">
-              &copy; {new Date().getFullYear()} Estelí Agrícola. Todos los derechos reservados.
+              &copy; {new Date().getFullYear()} Matagalpa Agrícola. Todos los derechos reservados.
             </p>
           </div>
 
@@ -54,6 +54,11 @@ export default function Footer() {
               <li>
                 <Link href="#" className="text-gray-400 transition hover:text-white">
                   Productos Especiales
+                </Link>
+              </li>
+               <li>
+                <Link href="#" className="text-gray-400 transition hover:text-white">
+                  Miel de abeja
                 </Link>
               </li>
             </ul>
@@ -108,7 +113,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-gray-800 pt-8">
           <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-            <p className="text-sm text-gray-400">Diseñado y desarrollado con ❤️ para los agricultores de Estelí</p>
+            <p className="text-sm text-gray-400">Diseñado y desarrollado con ❤️ para los agricultores de Matagalpa</p>
             <div className="flex gap-6">
               <Link href="#" className="text-sm text-gray-400 transition hover:text-white">
                 Términos y Condiciones

@@ -296,7 +296,7 @@ export default function VegetablesSection() {
                   <span className="text-xs font-medium text-gray-700">Hidropónico</span>
                 </div>
                 <p className="text-sm text-gray-600">
-                  Lechugas crujientes y frescas, cultivadas en sistemas hidropónicos y bajo sombra.
+                 Pepinos frescos, cultivados en sistemas hidropónicos y bajo sombra.
                 </p>
               </div>
             </div>

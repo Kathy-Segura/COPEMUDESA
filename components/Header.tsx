@@ -30,16 +30,16 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <div className="flex items-center gap-2">
-          <div className="relative h-10 w-10 overflow-hidden rounded-full bg-green-100">
+          <div className="relative h-15 w-18 overflow-hidden rounded-full bg-green-100">
             <Image
-              src="/coop.png?height=40&width=40"
+              src="/logo1.png?height=50&width=50"
               alt="Logo"
-              width={40}
-              height={40}
+              width={60}
+              height={60}
               className="object-cover"
             />
           </div>
-          <span className="text-xl font-bold text-green-800">Cooperativa Mujeres en Desarrollo R.L</span>
+          <span className="text-xl font-bold text-green-800">COPEMUDESA</span>
         </div>
         <nav className="hidden md:block">
           <ul className="flex items-center gap-8">
@@ -86,14 +86,14 @@ export default function Header() {
               <div className="flex items-center gap-2">
                 <div className="relative h-10 w-10 overflow-hidden rounded-full bg-green-100">
                   <Image
-                    src="/coop.png?height=40&width=40"
+                    src="/logo1.png?height=40&width=40"
                     alt="Logo"
                     width={40}
                     height={40}
                     className="object-cover"
                   />
                 </div>
-                <span className="text-xl font-bold text-green-800">Estelí Agrícola</span>
+                <span className="text-xl font-bold text-green-800">Matagalpa Agrícola</span>
               </div>
               <button className="text-green-800" onClick={() => setIsMenuOpen(false)}>
                 <X className="h-6 w-6" />

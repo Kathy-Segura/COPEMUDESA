@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="mb-6 flex items-center gap-2">
               <div className="relative h-10 w-10 overflow-hidden rounded-full bg-green-100">
                 <Image
-                  src="/coop.png?height=40&width=40"
+                  src="/logo1.png?height=40&width=40"
                   alt="Logo"
                   width={40}
                   height={40}

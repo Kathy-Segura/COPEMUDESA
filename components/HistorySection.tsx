@@ -98,7 +98,7 @@ export default function HistorySection() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-2xl shadow-md overflow-hidden">
             <div className="lg:col-span-5 relative h-64 lg:h-full">
               <Image
-                src="/diosas.png?height=600&width=500"
+                src="/historiacoop.jpeg?height=500&width=500"
                 alt="Historia de la Cooperativa"
                 fill
                 className="object-cover"

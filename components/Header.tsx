@@ -32,7 +32,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <div className="relative h-15 w-18 overflow-hidden rounded-full bg-green-100">
             <Image
-              src="/logo1.png?height=50&width=50"
+              src="/logocoop.jpg?height=50&width=50"
               alt="Logo"
               width={60}
               height={60}
@@ -86,7 +86,7 @@ export default function Header() {
               <div className="flex items-center gap-2">
                 <div className="relative h-10 w-10 overflow-hidden rounded-full bg-green-100">
                   <Image
-                    src="/logo1.png?height=40&width=40"
+                    src="/logocoop.jpg?height=40&width=40"
                     alt="Logo"
                     width={40}
                     height={40}

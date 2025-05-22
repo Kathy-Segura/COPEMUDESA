@@ -4,21 +4,22 @@ import Link from "next/link"
 export default function Footer() {
   return (
     <footer className="bg-gray-900 py-16 text-white">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <div className="mb-6 flex items-center gap-2">
-              <div className="relative h-10 w-10 overflow-hidden rounded-full bg-green-100">
-                <Image
-                  src="/logo1.png?height=40&width=40"
-                  alt="Logo"
-                  width={40}
-                  height={40}
-                  className="object-cover"
-                />
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <div className="mb-6 flex items-center gap-2">
+                <div className="relative h-10 w-10 overflow-hidden rounded-full bg-green-100">
+                  <Image
+                    src="/logocoop.jpg?height=40&width=40"
+                    alt="Logo"
+                    width={40}
+                    height={40}
+                    className="object-cover"
+                  />
+                </div>
+                <span className="text-xl font-bold text-white">COPEMUDESA</span>
               </div>
-              <span className="text-xl font-bold text-white">Matagalpa Agrícola</span>
-            </div>
+
             <p className="mb-6 text-gray-400">
               Ofreciendo los mejores productos agrícolas de Matagalpa, Nicaragua, al mundo entero. Calidad, tradición y
               sostenibilidad en cada producto.

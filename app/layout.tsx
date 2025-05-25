@@ -16,20 +16,26 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* ✅ Script de Metricool */}
-        <Script id="metricool" strategy="afterInteractive">
-          {`
-            (function(m,e,t,r,i,k,a){
-              m[i]=m[i]||function(){(m[i].q=m[i].q||[]).push(arguments)};
-              m[i].l=1*new Date();
-              k=e.createElement(t),a=e.getElementsByTagName(t)[0];
-              k.async=1;k.src=r;a.parentNode.insertBefore(k,a)
-            })(window, document, "script", "https://tracker.metricool.com/resources/be.js", "metr");
-
-            metr('init', { apiKey: "365fcbdf8c1325ae7bc34ee1ab3e8fd3" });
-          `}
-        </Script>
-
+        <Script
+          id="metricool-be"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              function loadScript(callback) {
+                var head = document.getElementsByTagName("head")[0];
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                script.src = "https://tracker.metricool.com/resources/be.js";
+                script.onreadystatechange = callback;
+                script.onload = callback;
+                head.appendChild(script);
+              }
+              loadScript(function() {
+                beTracker.t({ hash: "365fcbdf8c1325ae7bc34ee1ab3e8fd3" });
+              });
+            `
+          }}
+        />
         {children}
       </body>
     </html>

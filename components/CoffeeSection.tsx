@@ -34,12 +34,12 @@ export default function CoffeeSection() {
 
           {/* Botones de navegación */}
           <div className="flex justify-center mb-12">
-            <div className="bg-white rounded-full shadow-md p-1 inline-flex">
+            <div className="bg-white rounded-full shadow-md p-1 flex overflow-x-auto gap-1 sm:gap-2 sm:inline-flex">
               {["Cultivo", "Cosecha", "Procesamiento", "Entrega"].map((label, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveStep(index + 1)}
-                  className={`rounded-full px-6 py-3 text-sm font-medium transition ${
+                  className={`whitespace-nowrap rounded-full px-4 py-2 sm:px-6 sm:py-3 text-sm font-medium transition ${
                     activeStep === index + 1 ? "bg-amber-100 text-amber-800" : "text-gray-600 hover:bg-gray-100"
                   }`}
                 >

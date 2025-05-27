@@ -23,7 +23,7 @@ const ModalForm = () => {
 
         {/* Contenido del modal */}
         <div className="p-2 sm:p-4">
-          <div className="w-full aspect-[4/5] sm:aspect-[3/2] overflow-hidden rounded-md border border-gray-300 shadow-inner">
+          <div className="w-full h-[600px] sm:h-[700px] overflow-hidden rounded-md border border-gray-300 shadow-inner">
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSfC-Ul8VAeUUKEUCIRuk-ryK0874uWrE_YpEoPB0hwxA2kZZA/viewform?embedded=true"
               className="w-full h-full border-none"
@@ -33,6 +33,7 @@ const ModalForm = () => {
             </iframe>
           </div>
         </div>
+
       </div>
     </div>
   );

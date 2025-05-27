@@ -384,24 +384,24 @@ export default function GranosSection() {
               {/* Contenedor de imágenes grandes */}
               <div className="space-y-8">
                 {/* Imagen grande 1 */}
-                <div className="relative overflow-hidden rounded-2xl">
+                <div className="relative overflow-hidden rounded-2xl max-w-5xl mx-auto">
                   <Image
                     src="/granosmaiz.jpg"
                     alt="Granos Básicos"
                     width={800}
                     height={600}
-                    className="w-full rounded-2xl object-cover"
+                    className="w-full h-auto rounded-2xl object-cover"
                   />
                 </div>
 
                 {/* Imagen grande 2 (Debajo de la primera) */}
-                <div className="relative overflow-hidden rounded-2xl">
+                <div className="relative overflow-hidden rounded-2xl max-w-5xl mx-auto">
                   <Image
                     src="/granosfrijoles.jpg"
                     alt="Granos Básicos Adicional"
                     width={800}
                     height={600}
-                    className="w-full rounded-2xl object-cover"
+                    className="w-full h-auto rounded-2xl object-cover"
                   />
                 </div>
               </div>

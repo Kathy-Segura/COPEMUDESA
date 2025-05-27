@@ -22,53 +22,53 @@ export default function VegetablesSection() {
         </div>
 
         {/* Proceso de producción - Estilo de pestañas */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-green-800 mb-8 text-center">Proceso de Producción</h3>
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-green-800 mb-8 text-center">Proceso de Producción</h3>
 
-          {/* Pestañas */}
-          <div className="bg-white rounded-t-xl shadow-md">
-            <div className="flex border-b border-gray-200">
-              <button
-                onClick={() => setActiveStep(1)}
-                className={`flex-1 py-4 px-6 text-center font-medium transition-colors ${
-                  activeStep === 1
-                    ? "text-green-700 border-b-2 border-green-500"
-                    : "text-gray-600 hover:text-green-600 hover:bg-green-50"
-                }`}
-              >
-                Semilleros
-              </button>
-              <button
-                onClick={() => setActiveStep(2)}
-                className={`flex-1 py-4 px-6 text-center font-medium transition-colors ${
-                  activeStep === 2
-                    ? "text-green-700 border-b-2 border-green-500"
-                    : "text-gray-600 hover:text-green-600 hover:bg-green-50"
-                }`}
-              >
-                Transplante
-              </button>
-              <button
-                onClick={() => setActiveStep(3)}
-                className={`flex-1 py-4 px-6 text-center font-medium transition-colors ${
-                  activeStep === 3
-                    ? "text-green-700 border-b-2 border-green-500"
-                    : "text-gray-600 hover:text-green-600 hover:bg-green-50"
-                }`}
-              >
-                Manejo
-              </button>
-              <button
-                onClick={() => setActiveStep(4)}
-                className={`flex-1 py-4 px-6 text-center font-medium transition-colors ${
-                  activeStep === 4
-                    ? "text-green-700 border-b-2 border-green-500"
-                    : "text-gray-600 hover:text-green-600 hover:bg-green-50"
-                }`}
-              >
-                Cosecha
-              </button>
-            </div>
+            {/* Pestañas responsivas con scroll */}
+            <div className="bg-white rounded-t-xl shadow-md">
+              <div className="flex overflow-x-auto border-b border-gray-200 sm:justify-center">
+                <button
+                  onClick={() => setActiveStep(1)}
+                  className={`whitespace-nowrap min-w-[120px] px-4 sm:px-6 py-3 text-sm text-center font-medium transition-colors ${
+                    activeStep === 1
+                      ? "text-green-700 border-b-2 border-green-500"
+                      : "text-gray-600 hover:text-green-600 hover:bg-green-50"
+                  }`}
+                >
+                  Semilleros
+                </button>
+                <button
+                  onClick={() => setActiveStep(2)}
+                  className={`whitespace-nowrap min-w-[120px] px-4 sm:px-6 py-3 text-sm text-center font-medium transition-colors ${
+                    activeStep === 2
+                      ? "text-green-700 border-b-2 border-green-500"
+                      : "text-gray-600 hover:text-green-600 hover:bg-green-50"
+                  }`}
+                >
+                  Transplante
+                </button>
+                <button
+                  onClick={() => setActiveStep(3)}
+                  className={`whitespace-nowrap min-w-[120px] px-4 sm:px-6 py-3 text-sm text-center font-medium transition-colors ${
+                    activeStep === 3
+                      ? "text-green-700 border-b-2 border-green-500"
+                      : "text-gray-600 hover:text-green-600 hover:bg-green-50"
+                  }`}
+                >
+                  Manejo
+                </button>
+                <button
+                  onClick={() => setActiveStep(4)}
+                  className={`whitespace-nowrap min-w-[120px] px-4 sm:px-6 py-3 text-sm text-center font-medium transition-colors ${
+                    activeStep === 4
+                      ? "text-green-700 border-b-2 border-green-500"
+                      : "text-gray-600 hover:text-green-600 hover:bg-green-50"
+                  }`}
+                >
+                  Cosecha
+                </button>
+              </div>
 
             {/* Contenido de la pestaña */}
             <div className="p-8">

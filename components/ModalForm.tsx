@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 const ModalForm = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Mostrar el modal 3 segundos después de que la página se cargue
+  // Mostrar el modal después de 3 segundos
   useEffect(() => {
     const timer = setTimeout(() => setIsOpen(true), 3000);
     return () => clearTimeout(timer);
   }, []);
 
-  // Bloquear scroll del fondo cuando el modal está abierto
+  // Bloquear scroll del fondo
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -25,7 +25,7 @@ const ModalForm = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 px-4">
-      <div className="relative bg-white rounded-xl shadow-xl w-full max-w-[90%] sm:max-w-2xl max-h-[90vh] overflow-hidden">
+      <div className="relative bg-white rounded-xl shadow-xl w-full max-w-[95%] sm:max-w-2xl max-h-[90vh] overflow-hidden">
         {/* Botón de cierre */}
         <button
           onClick={() => setIsOpen(false)}
@@ -36,15 +36,18 @@ const ModalForm = () => {
 
         {/* Contenido del modal */}
         <div className="p-4">
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfC-Ul8VAeUUKEUCIRuk-ryK0874uWrE_YpEoPB0hwxA2kZZA/viewform?embedded=true"
-            className="w-full h-[80vh] rounded-md border border-gray-300 shadow-inner"
-            frameBorder="0"
-            marginHeight={0}
-            marginWidth={0}
-          >
-            Cargando…
-          </iframe>
+          <div className="relative w-full" style={{ paddingTop: "140%" }}>
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfC-Ul8VAeUUKEUCIRuk-ryK0874uWrE_YpEoPB0hwxA2kZZA/viewform?embedded=true"
+              className="absolute top-0 left-0 w-full h-full rounded-md border border-gray-300 shadow-inner"
+              frameBorder="0"
+              marginHeight={0}
+              marginWidth={0}
+              allowFullScreen
+            >
+              Cargando…
+            </iframe>
+          </div>
         </div>
       </div>
     </div>

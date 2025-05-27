@@ -82,7 +82,7 @@ const ModalForm = () => {
         const fullCorreo = correo + "@" + dominioCorreo;
 
         const response = await fetch(
-            "https://script.google.com/macros/s/AKfycbwYJtRDSZbyFSh1oNlD7AJFqiI8IGKUPIX_4nLFN9bIK4Jn1AgRobZLbHLvDYKDy5Ewng/exec",
+            "https://script.google.com/macros/s/AKfycbyeZeNYKseSbcbybqKbzuaXZgspcCgnfaafKsdF_BZgREZ0mYCRMLLzu2TT-kE1cDjuDg/exec",
             {
             method: "POST",
             body: JSON.stringify({ nombre, apellido, sexo, edad, correo: fullCorreo }),
@@ -144,7 +144,7 @@ const ModalForm = () => {
                 placeholder="Nombre"
                 value={formData.nombre}
                 onChange={handleChange}
-                className="w-full border-b-2 border-green-400 p-2 placeholder-green-400 focus:outline-none focus:border-green-600"
+                className="w-full border-b-2 border-green-400 p-2 placeholder-green-600 focus:outline-none focus:border-green-600"
                 required
               />
               <input
@@ -152,7 +152,7 @@ const ModalForm = () => {
                 placeholder="Apellido"
                 value={formData.apellido}
                 onChange={handleChange}
-                className="w-full border-b-2 border-green-400 p-2 placeholder-green-400 focus:outline-none focus:border-green-600"
+                className="w-full border-b-2 border-green-400 p-2 placeholder-green-600 focus:outline-none focus:border-green-600"
                 required
               />
 
@@ -184,7 +184,7 @@ const ModalForm = () => {
                 max={120}
                 value={formData.edad}
                 onChange={handleChange}
-                className="w-full border-b-2 border-green-400 p-2 placeholder-green-400 focus:outline-none focus:border-green-600"
+                className="w-full border-b-2 border-green-400 p-2 placeholder-green-600 focus:outline-none focus:border-green-600"
                 required
               />
 
@@ -197,7 +197,7 @@ const ModalForm = () => {
                     placeholder="Inicio del correo"
                     value={formData.correo}
                     onChange={handleChange}
-                    className="flex-grow border-b-2 border-green-400 p-2 placeholder-green-400 focus:outline-none focus:border-green-600"
+                    className="flex-grow border-b-2 border-green-400 p-2 placeholder-green-600 focus:outline-none focus:border-green-600"
                     required
                   />
                   <select

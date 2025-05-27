@@ -1,4 +1,3 @@
-// components/ModalForm.tsx
 import { useEffect, useState } from "react";
 
 const ModalForm = () => {
@@ -10,15 +9,27 @@ const ModalForm = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Bloquear scroll del fondo cuando el modal está abierto
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 px-4">
-      <div className="relative bg-white rounded-xl shadow-xl w-full max-w-2xl max-h-[90vh] overflow-hidden">
+      <div className="relative bg-white rounded-xl shadow-xl w-full max-w-[90%] sm:max-w-2xl max-h-[90vh] overflow-hidden">
         {/* Botón de cierre */}
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute top-3 right-3 text-gray-500 hover:text-red-600 text-2xl font-bold"
+          className="absolute top-3 right-3 text-gray-500 hover:text-red-600 text-2xl font-bold z-10"
         >
           &times;
         </button>
@@ -27,12 +38,10 @@ const ModalForm = () => {
         <div className="p-4">
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSfC-Ul8VAeUUKEUCIRuk-ryK0874uWrE_YpEoPB0hwxA2kZZA/viewform?embedded=true"
-            width="100%"
-            height="600"
+            className="w-full h-[80vh] rounded-md border border-gray-300 shadow-inner"
             frameBorder="0"
             marginHeight={0}
             marginWidth={0}
-            className="w-full rounded-md border border-gray-300 shadow-inner"
           >
             Cargando…
           </iframe>

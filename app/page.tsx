@@ -15,16 +15,17 @@ import ContactSection from "@/components/ContactSection"
 import Footer from "@/components/Footer"
 import ProductSection from "@/components/ProductSection"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-
 import { Coffee, Wheat, Leaf, ArrowUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import HoneySection from "@/components/HoneySection"
+import ModalForm from "@/components/ModalForm"
 
 export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <Header />
       <main className="flex-1">
+        <ModalForm/>
         <HeroSection />
         <MissionVisionSection />
         <HistorySection />

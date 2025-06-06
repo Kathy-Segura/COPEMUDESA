@@ -25,7 +25,6 @@ export default function LandingPage() {
     <div className="flex min-h-screen flex-col bg-white">
       <Header />
       <main className="flex-1">
-        <ModalForm/>
         <HeroSection />
         <MissionVisionSection />
         <HistorySection />
@@ -34,9 +33,7 @@ export default function LandingPage() {
         <GrainsSection/>
         <VegetablesSection/>
         <HoneySection/>
-        <VidSeccion/>
         <CertificationSeccion/>
-        <TestimonialsSection />
         <ContactSection />
       </main>
       <Footer />
